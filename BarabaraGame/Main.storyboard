@@ -83,16 +83,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="naS-kc-UzA">
-                                <rect key="frame" x="28" y="20" width="52" height="34"/>
+                                <rect key="frame" x="28" y="20" width="69" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.41176470588235292" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="戻る"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aka-BY-ZMZ">
-                                <rect key="frame" x="286" y="20" width="76" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41176470588235292" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="リトライ"/>
+                                <state key="normal" title="Topへ"/>
+                                <connections>
+                                    <action selector="toTop" destination="ax7-Z8-1oV" eventType="touchUpInside" id="Vag-K3-ULA"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tail.png" id="pqX-zB-0Py">
                                 <rect key="frame" x="162" y="223" width="50" height="111"/>
@@ -114,6 +111,15 @@
                                 <rect key="frame" x="0.0" y="332" width="375" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aka-BY-ZMZ">
+                                <rect key="frame" x="286" y="20" width="69" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41176470588235292" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="リトライ"/>
+                                <connections>
+                                    <action selector="retry" destination="ax7-Z8-1oV" eventType="touchUpInside" id="UV0-Xm-y0a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -129,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="654.5" y="-76.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Ranking View Controller-->
         <scene sceneID="aZA-4I-ONS">
             <objects>
-                <viewController id="rZp-hr-JCx" sceneMemberID="viewController">
+                <viewController id="rZp-hr-JCx" customClass="RankingViewController" customModule="BarabaraGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KkQ-gD-h9t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,6 +149,9 @@
                                 <color key="backgroundColor" red="0.41176470588235292" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Topへ"/>
+                                <connections>
+                                    <action selector="toTop" destination="rZp-hr-JCx" eventType="touchUpInside" id="V2R-BI-FlM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ランキング" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H4k-Hx-dSd">
                                 <rect key="frame" x="20" y="37" width="335" height="80"/>
@@ -197,6 +206,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="rankingLabel1" destination="tft-ZS-Cqz" id="X7m-84-wCq"/>
+                        <outlet property="rankingLabel2" destination="G8X-T9-ydF" id="CTM-OS-cle"/>
+                        <outlet property="rankingLabel3" destination="sgm-T4-HTp" id="caM-SJ-0P7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phy-10-OPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

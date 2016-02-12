@@ -9,9 +9,18 @@
 import UIKit
 
 class RankingViewController: UIViewController {
+    
+    @IBOutlet var rankingLabel1: UILabel!
+    @IBOutlet var rankingLabel2: UILabel!
+    @IBOutlet var rankingLabel3: UILabel!
+    
+    let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        rankingLabel1.text = String(defaults.integerForKey("score1"))
+        rankingLabel2.text = String(defaults.integerForKey("score2"))
+        rankingLabel3.text = String(defaults.integerForKey("score3"))
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +30,9 @@ class RankingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func toTop(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
